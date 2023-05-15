@@ -44,8 +44,14 @@ print(myvar)
 
 #dictionary as a dataframe
 dict_var2={
-    "column1":["anirudh","ravi","avinash"],
-    "column2":[25,24,23]
+    "calories":[420,530,600],
+    "duration":[25,24,23]
 }
-myvar=pd.DataFrame(dict_var2)
-print(myvar)
+df=pd.DataFrame(dict_var2)
+print(df)
+#using loc to access individual rows
+print(df.loc[0])
+#let us use default indices
+df=pd.DataFrame(dict_var2,index=["day1","day2","day3"])
+print(df)
+print(df.loc["day2"])
