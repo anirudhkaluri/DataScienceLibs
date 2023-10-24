@@ -31,12 +31,12 @@ print(myvar[2])
 
 #dictionary as a series
 dict_var={
-    "day1":23,
-    "day2":54,
-    "day3":72
+    "day1":[23,24],
+    "day2":[54,34],
+    "day3":[72,56]
 }
 myvar=pd.Series(dict_var)
-print(myvar)
+print('dictionary as a series\n',myvar)
 #to include specific indices 
 myvar=pd.Series(dict_var,index=["day1","day2"])
 print(myvar)
@@ -55,3 +55,6 @@ print(df.loc[0])
 df=pd.DataFrame(dict_var2,index=["day1","day2","day3"])
 print(df)
 print(df.loc["day2"])
+
+
+#list of lists as series
